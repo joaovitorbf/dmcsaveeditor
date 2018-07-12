@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
     ui->saveBox->setEnabled(false);
     ui->charBox->setEnabled(false);
     ui->optBox->setEnabled(false);
@@ -44,6 +45,7 @@ void MainWindow::selectFile(){
         QMessageBox msg;
         msg.setText("No valid file has been selected.");
         msg.setIcon(QMessageBox::Critical);
+        msg.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
         msg.exec();
     } else {
         //Open file and load to buffer
@@ -65,6 +67,7 @@ void MainWindow::selectFile(){
             QMessageBox msg;
             msg.setText("The file selected is not a Devil May Cry 1 save file.");
             msg.setIcon(QMessageBox::Critical);
+            msg.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
             msg.exec();
             emit isFileDMC(false);
         } else {
@@ -139,6 +142,7 @@ void MainWindow::saveClicked(){
     msg.setInformativeText("Are you sure you want to save?");
     msg.setStandardButtons(QMessageBox::Save | QMessageBox::Discard);
     msg.setDefaultButton(QMessageBox::Discard);
+    msg.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
     msg.setIcon(QMessageBox::Warning);
     int ret = msg.exec();
 
@@ -199,5 +203,6 @@ void MainWindow::saveClicked(){
 
     QMessageBox msgOk;
     msgOk.setText("Your save file has been modified.");
+    msgOk.setWindowFlags(Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint | Qt::WindowCloseButtonHint);
     msgOk.exec();
 }
