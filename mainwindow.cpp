@@ -126,12 +126,10 @@ void MainWindow::updateInfo(int index){
 
     saveFile.seekg(saveSlot*2416+44); //Read playtime and convert
     saveFile.read(buffer, 4);
-    playtime = (buffer[0] | (buffer[1]<<8) | (buffer[2]<<16) | (buffer[3]<<24))/60;
+    playtime = *((long*)buffer)/60; //quick hack from stack overflow (may be something that should not be done, dunno)
     ui->hSpinBox->setValue(playtime/3600);
-    playtime = playtime%3600;
-    ui->mSpinBox->setValue(playtime/60);
-    playtime = playtime%60;
-    ui->sSpinBox->setValue(playtime);
+    ui->mSpinBox->setValue(playtime/60 % 60);
+    ui->sSpinBox->setValue(playtime % 60);
 
     saveFile.close();
 }
