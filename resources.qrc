@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>DMC.png</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file>voice.wav</file>
+    </qresource>
+</RCC>
