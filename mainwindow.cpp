@@ -89,9 +89,11 @@ void MainWindow::selectFile(){
 void MainWindow::updateInfo(int index){
     if (index == -1) return; //quick fix for file change crash
 
-    int saveSlot = std::stoi(ui->saveSlotCB->itemText(index).toStdString())-1, playtime;
+    int saveSlot = std::stoi(ui->saveSlotCB->itemText(index).toStdString())-1;
+    int32_t playtime;
 
     char buffer[4];
+
     std::ifstream saveFile (ui->directoryLine->text().toStdString(), std::ios::binary | std::ios::in);
 
     saveFile.seekg(saveSlot*2416+32); //Read save count and times beaten
@@ -114,7 +116,7 @@ void MainWindow::updateInfo(int index){
 
     saveFile.seekg(saveSlot*2416+1588); //Read red orbs
     saveFile.read(buffer, 4);
-    ui->rSpinBox->setValue(buffer[0] | (buffer[1]<<8) | (buffer[2]<<16) | (buffer[3]<<24));
+    ui->rSpinBox->setValue(*((int32_t*)buffer));
 
     saveFile.seekg(saveSlot*2416+1592); //Read blue orbs
     saveFile.read(buffer, 1);
@@ -126,7 +128,7 @@ void MainWindow::updateInfo(int index){
 
     saveFile.seekg(saveSlot*2416+44); //Read playtime and convert
     saveFile.read(buffer, 4);
-    playtime = *((long*)buffer)/60; //quick hack from stack overflow (may be something that should not be done, dunno)
+    playtime = *((int32_t*)buffer)/60;
     ui->hSpinBox->setValue(playtime/3600);
     ui->mSpinBox->setValue(playtime/60 % 60);
     ui->sSpinBox->setValue(playtime % 60);
