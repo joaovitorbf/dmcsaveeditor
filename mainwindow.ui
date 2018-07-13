@@ -9316,14 +9316,14 @@ border-color:white;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>480</y>
-      <width>81</width>
-      <height>16</height>
+      <x>443</x>
+      <y>478</y>
+      <width>101</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="text">
-     <string>by JoaoVitorBF</string>
+     <string>v1.0 by JoaoVitorBF</string>
     </property>
    </widget>
   </widget>
