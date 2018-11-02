@@ -2,7 +2,7 @@
 ![Screenshot](https://i.imgur.com/C95s9uM.png)
 
 This is a save editor for the PC version of Devil May Cry 1. It can currently modify all the parameters seen on the screenshot.  
-An inventory editor is in the works.
+
 ## Usage
 Download the latest version of the Windows binaries here: https://github.com/joaovitorbf/dmcsaveeditor/releases/latest  
 Extract everything to a folder and run the executable. You can pick your dmc1.sav file and the save slot you want to modify on the "Save File Picker" panel. Modify everything you want and save.  
