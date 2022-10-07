@@ -1137,6 +1137,14 @@
        </disabled>
       </palette>
      </property>
+     <property name="font">
+      <font>
+       <family>DejaVu Sans Mono</family>
+       <pointsize>12</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
      <property name="text">
       <string>Find</string>
      </property>
@@ -9991,10 +9999,10 @@ border-color:white;</string>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>12</x>
-      <y>2</y>
+      <x>10</x>
+      <y>10</y>
       <width>171</width>
-      <height>16</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
@@ -10004,16 +10012,16 @@ border-color:white;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>430</x>
       <y>640</y>
-      <width>171</width>
+      <width>131</width>
       <height>20</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>DejaVu Sans</family>
-      <pointsize>13</pointsize>
+      <pointsize>10</pointsize>
      </font>
     </property>
     <property name="text">
