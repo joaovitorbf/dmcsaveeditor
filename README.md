@@ -1,5 +1,5 @@
 # Devil May Cry Save Editor
-![Screenshot](https://i.imgur.com/C95s9uM.png)
+![Screenshot](https://i.imgur.com/7VpnrH6.jpeg)
 
 This is a save editor for the PC version of Devil May Cry 1. It can currently modify all the parameters seen on the screenshot.  
 
