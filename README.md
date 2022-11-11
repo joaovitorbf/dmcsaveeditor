@@ -1,7 +1,7 @@
 # Devil May Cry Save Editor
 ![Screenshot](https://i.imgur.com/C95s9uM.png)
 
-This is a save editor for the PC version of Devil May Cry 1. It can currently modify all the parameters seen on the screenshot.  
+This is a save editor for the PC and Switch versions of Devil May Cry 1. It can currently modify all the parameters seen on the screenshot.  
 
 ## Usage
 Download the latest version of the Windows binaries here: https://github.com/joaovitorbf/dmcsaveeditor/releases/latest  
